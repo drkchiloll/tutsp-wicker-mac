@@ -1,0 +1,25 @@
+{
+  "name": "wicker",
+  "version": "1.0.0",
+  "description": "Following along with a Tutsplus React course",
+  "main": "index.js",
+  "scripts": {
+    "build:js" : "browserify ./src/app.js -t [ babelify --optional es7.classProperties] --outfile public/dist/bundle.js",
+    "build" : "watch 'npm run build:js' ./src"
+  },
+  "author": "Sam Womack",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "cookie-parser": "^1.4.0",
+    "ejs": "^2.3.4",
+    "express": "^4.13.3",
+    "express-session": "^1.11.3",
+    "firebase": "^2.3.1"
+  },
+  "devDependencies": {
+    "babelify": "^6.3.0",
+    "browserify": "^11.2.0",
+    "watch": "^0.16.0"
+  }
+}
