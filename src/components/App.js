@@ -1,9 +1,24 @@
 import React from 'react';
+import {RouteHandler} from 'react-router';
 
-var App = module.exports = React.createClass({
+export default class App extends React.Component {
+  state = { user : USER }
+
   render() {
     return (
-      <div> Hello World </div>
+      <div>
+        <div className='row'>
+          <div className='three columns'>
+            <h1> Wicker </h1>
+            Login
+
+            PageList
+          </div>
+          <div className='nine columns'>
+            <RouteHandler user={this.state.user}/>
+          </div>
+        </div>
+      </div>
     );
   }
-});
+}
