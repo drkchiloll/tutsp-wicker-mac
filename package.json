@@ -4,8 +4,8 @@
   "description": "Following along with a Tutsplus React course",
   "main": "index.js",
   "scripts": {
-    "build:js" : "browserify ./src/app.js -t [ babelify --optional es7.classProperties] --outfile public/dist/bundle.js",
-    "build" : "watch 'npm run build:js' ./src"
+    "build:js": "browserify ./src/app.js -t [ babelify --optional es7.classProperties] --outfile public/dist/bundle.js",
+    "build": "watch 'npm run build:js' ./src"
   },
   "author": "Sam Womack",
   "license": "ISC",
@@ -15,7 +15,9 @@
     "ejs": "^2.3.4",
     "express": "^4.13.3",
     "express-session": "^1.11.3",
-    "firebase": "^2.3.1"
+    "firebase": "^2.3.1",
+    "react": "^0.13.3",
+    "react-router": "^0.13.3"
   },
   "devDependencies": {
     "babelify": "^6.3.0",
