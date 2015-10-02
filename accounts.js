@@ -28,7 +28,7 @@ router.post('/api/signup', function(req, res) {
     } else {
       var userObj = {
         username : username,
-        passwordHash : hash(password);
+        passwordHash : hash(password)
       };
 
       users.child(username).set(userObj);
