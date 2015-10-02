@@ -13,7 +13,7 @@ router.use(require('body-parser').json());
 router.use(require('cookie-parser')());
 router.use(require('express-session')({
   resave : false,
-  saveUnitialized : true,
+  saveUninitialized : true,
   secret : 'a;ldjfaekurta;ldkjfpoeiua;lkdfj'
 }));
 
@@ -57,7 +57,7 @@ router.post('/api/signin', function(req, res) {
   });
 });
 
-router.post('/api/signout', function() {
+router.post('/api/signout', function(req, res) {
   delete req.session.user;
   res.json({ signedIn : false, message : 'You have been signed out'});
 });
