@@ -53,7 +53,7 @@ export default class Section extends React.Component {
     });
   }
   startEditing = evt => {
-    if(!this.props.user || this.state.editing) return;
+    if(!this.props.user || this.state.editing || this.state.locked) return;
     this.setState({editing : true});
     API.pages.child(this.props.path).update({
       editor : this.props.user.username
